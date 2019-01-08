@@ -406,7 +406,6 @@ h6 {
 
     font-size: 1.8rem;
     color: rgba(62, 58, 58, 0.9);
-    font-weight: 3;
     margin-top: 8px;
 }
 
@@ -451,7 +450,7 @@ h6 {
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
-    font-weight: 1;
+    font-weight: 300;
     font-size: 1rem;
 
 }
@@ -504,19 +503,22 @@ h6 {
 
 }
 
+/*
 .child-left h4 {
     font-family: 'Roboto regular', sans-serif;
     font-size: 1.9rem;
     letter-spacing: 0.1em;
-    font-weight: 1;
 
 }
+*/
 
 .child_text {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: block;
+    font-weight: 300;
+
 }
 
 /*--------------------------------------------------- KONTAKT -----------------------------------------------------------------*/
@@ -538,9 +540,9 @@ h6 {
 
 .box_inside h1 {
 
-    font-size: 2.0rem;
+    font-size: 2.6rem;
     color: black;
-    font-weight: 2;
+    font-weight: 300;
     letter-spacing: 0.1em;
     font-family: 'Roboto', sans-serif;
 
@@ -568,10 +570,6 @@ h6 {
     height: 200px;
     width: 200px;
 
-}
-
-.picture_inside img:hover {
-    border
 }
 
 .icons_inside {
@@ -640,7 +638,6 @@ h6 {
 
 
     .row_port {
-        padding: none;
         margin-top: 0px;
     }
 
