@@ -25,7 +25,7 @@ img {
     text-align: center;
     display: block;
     color: black;
-    font-size: 1.6rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     margin-top: 30px;
     color: #401E19;
@@ -382,7 +382,6 @@ nav.show {
 
 .direct_link {
 
-    /*    margin-top: -50px;*/
     font-size: 1.2rem;
     font-family: 'Roboto Condensed';
     text-align: center;
@@ -436,7 +435,7 @@ h6 {
 .about p {
 
     color: black;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: 'Roboto regular', sans-serif;
     line-height: 25px;
     padding: 20px;
@@ -491,7 +490,7 @@ h6 {
 
     font-family: 'Roboto regular', sans-serif;
     line-height: 1.6;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .child-left li {
@@ -499,18 +498,9 @@ h6 {
 
     font-family: 'Roboto regular', sans-serif;
     line-height: 1.6;
-    font-size: 0.9rem;
+    font-size: 1rem;
 
 }
-
-/*
-.child-left h4 {
-    font-family: 'Roboto regular', sans-serif;
-    font-size: 1.9rem;
-    letter-spacing: 0.1em;
-
-}
-*/
 
 .child_text {
     list-style-type: none;
@@ -518,8 +508,11 @@ h6 {
     padding: 0;
     display: block;
     font-weight: 300;
+    font-size: 1rem;
+
 
 }
+
 
 /*--------------------------------------------------- KONTAKT -----------------------------------------------------------------*/
 
@@ -556,6 +549,7 @@ h6 {
     line-height: 1.8;
     list-style: none;
     letter-spacing: 0.1em;
+    font-size: 1.2rem;
 }
 
 
