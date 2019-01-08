@@ -1,8 +1,16 @@
 /*--------------------------------------------------- OVERORDNET INDSTILLINGER -----------------------------------------------------------------*/
+
+* {
+
+    font-family: 'Roboto', sans-serif;
+
+}
+
 body,
 html {
     margin: 0;
     height: 100%;
+
 }
 
 img {
@@ -10,15 +18,9 @@ img {
 }
 
 
-a {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-}
-
 /*--------------------------------------------------- TITLER PÅ DIVERSE SIDER -----------------------------------------------------------------*/
 
-.title h2 {
+.title {
 
     display: block;
     text-align: center;
@@ -32,93 +34,226 @@ a {
 
 }
 
-.title_front h2 {
-
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    font-size: 5.3rem;
-    letter-spacing: 5px;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold;
-    padding: 400px 0px 0px 0px;
-
-}
-
-
 
 .title_two {
 
-    margin-top: -50px;
     text-align: center;
     display: block;
-    text-decoration: none;
     color: black;
     font-size: 1.6rem;
     letter-spacing: 2px;
-    font-family: 'Roboto regular', sans-serif;
+    margin-top: 30px;
+    color: #401E19;
 }
+
+
 
 /*--------------------------------------------------- NAVIGATION -----------------------------------------------------------------*/
 
-/* baggrunds billedet */
-.header_front {
-    background-image: url("front/hero-alberte-1920x850.jpg");
-    background-position: center;
-    background-size: cover;
-    min-height: 680px;
 
+/*-------------- BURGERMENU -------------*/
+.mobil {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 40px;
+
+
+}
+
+.mobil_nav {
+    display: none;
+
+
+}
+
+.burgermenu {
+    background-color: white;
+
+
+
+
+
+}
+
+.burgermenu h1 {
+    color: pink;
+    padding: 10px;
+    margin-top: 5%;
+    float: left;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 
 
-#nav_front {
-    overflow: hidden;
-    position: sticky;
-    /*    z-index: 2;*/
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding-top: 60px;
-    color: white;
+
+.burger {
+    cursor: pointer;
+    background: white;
+    border: none;
+    padding-bottom: 3em;
+    padding-right: 1em;
+
+    padding-top: 3em;
+    float: right;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+
+
+}
+
+li {
+    padding-top: 20px;
+    cursor: pointer;
+    text-align: center;
+
+    text-decoration: none;
+    color: black;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+
+}
+
+a:hover {
+    color: darkgrey;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 1px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
 }
 
 nav {
-    /*    position: sticky;*/
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    overflow: hidden;
+    transition: 0s;
+}
 
+nav.show {
+    max-height: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-2px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-4px, -8px);
+}
+
+.desktop_nav {
+    display: none;
+}
+
+
+.title_front h1 {
+
+    display: none;
 
 }
 
-/* ændringer inden i navigationsbaren */
-nav a {
-    float: left;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-family: 'Roboto regular', sans-serif;
-    color: black;
-    letter-spacing: 0.3rem;
-}
-
-/* Change the color of links on hover */
-nav a:hover {
-    border-width: 0 0 1.5px;
-    border-style: solid;
+/*-------------- DESKTOPMENU -------------*/
 
 
-}
+@media screen and (min-width:768px) {
 
-/* farven på det aktuelle link */
-nav a.active {
-    color: black;
-    text-decoration: none;
+
+
+    .burgermenu {
+        display: none;
+    }
+
+    .mobil {
+        display: none;
+    }
+
+    .desktop_nav {
+
+        display: block;
+        padding-top: 20px;
+        background-image: url("front/hero_doodle2.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+
+    }
+
+    .title_front h1 {
+
+        margin-top: -60px;
+        font-family: 'Roboto Condensed', sans-serif;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        position: absolute;
+        letter-spacing: 7px;
+        left: 10%;
+        top: 10%;
+
+    }
+
+
+    li {
+        padding-top: 0px;
+
+    }
+
+    .list {
+
+        cursor: pointer;
+        text-align: center;
+        font-family: heebo, sans-serif;
+        text-decoration: none;
+        color: black;
+        font-weight: 100;
+    }
+
+
+    ul {
+        display: flex;
+        justify-content: center;
+        padding: 14px 16px;
+    }
+
+
+
+
+    .links_front a {
+        float: left;
+        display: block;
+        text-align: center;
+        padding: 14px 60px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: white;
+
+
+    }
+
 }
 
 /*--------------------------------------------------- FOOTER -----------------------------------------------------------------*/
@@ -132,6 +267,7 @@ nav a.active {
     justify-content: center;
     align-content: center;
     height: 100px;
+    margin-top: 30px;
 
 }
 
@@ -196,10 +332,11 @@ nav a.active {
 .column_port {
     flex-basis: 50px;
     flex-grow: 1;
+    padding: 20px
 }
 
 .column_port h3 {
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-family: 'Roboto Condensed', sans-serif;
 
 
@@ -227,21 +364,12 @@ nav a.active {
 
 .content p {
     background-color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: 'Roboto regular', sans-serif;
     cursor: pointer;
 }
 
-/* Responsivt layout - der gerne skulle få kolonnerne til hoppe ovenpå hinaden istedet for ved  */
 
-@media screen and (max-width: 1200px) {
-    .column_port {
-        width: 100%;
-        flex-basis: 200px;
-        flex-grow: 1;
-        text-align: center;
-    }
-}
 
 /*--------------------------------------------------- FÆLLES INDSTILLINGER FOR SIDERNE -----------------------------------------------------------------*/
 
@@ -261,8 +389,9 @@ nav a.active {
 }
 
 
-.link {
-    margin-top: 10px;
+.direct_link {
+
+    /*    margin-top: -50px;*/
     font-size: 1.2rem;
     font-family: 'Roboto Condensed';
     text-align: center;
@@ -270,7 +399,7 @@ nav a.active {
     color: rgba(0, 0, 0, 0.84);
 }
 
-.link:hover {
+.direct_link:hover {
     opacity: 0.6;
 }
 
@@ -294,7 +423,6 @@ h6 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: -40px;
     padding: 0px 60px 0px 60px;
 }
 
@@ -323,6 +451,8 @@ h6 {
     font-size: 1rem;
     font-family: 'Roboto regular', sans-serif;
     line-height: 25px;
+    padding: 20px;
+    text-align: left;
 
 }
 
@@ -332,7 +462,6 @@ h6 {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    padding: 0px 30px 0px 30px;
     font-weight: 1;
     font-size: 1rem;
 
@@ -340,7 +469,7 @@ h6 {
 
 .about {
     text-align: center;
-    margin: auto;
+
     flex-basis: 400px;
     order: 1;
 
@@ -352,18 +481,19 @@ h6 {
 
 .around {
 
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px 200px 0px 200px;
+    padding: 30px;
+
+    /*
     align-content: center;
     justify-content: center;
+*/
 
 
 }
 
 .inside {
     margin: auto;
-    text-align: center;
+    text-align: left;
     padding-bottom: 20px;
 
 
@@ -371,11 +501,20 @@ h6 {
 
 .child-left h3 {
     font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
 
 }
 
-.child-left p,
+.child-left p {
+    text-align: left;
+
+    font-family: 'Roboto regular', sans-serif;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
 .child-left li {
+
 
     font-family: 'Roboto regular', sans-serif;
     line-height: 1.6;
@@ -391,10 +530,11 @@ h6 {
 
 }
 
-ul {
+.child_text {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: block;
 }
 
 /*--------------------------------------------------- KONTAKT -----------------------------------------------------------------*/
@@ -414,7 +554,7 @@ ul {
 
 }
 
-.box_inside h9 {
+.box_inside h1 {
 
     font-size: 2.0rem;
     color: black;
@@ -462,7 +602,6 @@ ul {
 
 /*--------------------------------------------------- video i bund -----------------------------------------------------------------*/
 
-#presvideo {}
 
 #presvideo video {
     width: 40%;
@@ -476,13 +615,13 @@ ul {
 }
 
 #presvideo .column1 {
-    flex-basis: 100px;
+    flex-basis: 200px;
     padding-top: 2px;
 }
 
 #presvideo .column2 {
     text-align: center;
-    flex-basis: 100px;
+    flex-basis: 200px;
     padding: 10px 0px 20px 0px;
 }
 
@@ -490,13 +629,6 @@ ul {
     display: flex;
     flex-wrap: wrap;
 }
-
-/*--------------------------------------------------- IKONER -----------------------------------------------------------------*/
-
-
-
-
-
 
 
 
@@ -531,15 +663,15 @@ ul {
 
 }
 
-@media screen and (max-width: 660px) {
-    #videoer .v1 {
+@media screen and (max-width: 600px) {
+    #presvideo {
 
         flex-basis: 200px;
     }
 }
 
 @media screen and (min-width: 660px) {
-    #videoer .v1 {
+    #presvideo {
 
         flex-basis: 100px;
     }
@@ -548,20 +680,6 @@ ul {
 
 @media screen and (max-width: 780px) {
 
-    .title_front h2 {
-
-        font-size: 3.3rem;
-
-
-
-    }
-
-    .title h2 {
-
-        font-size: 2.2rem;
-
-
-    }
 
     .header_front {
 
@@ -569,31 +687,18 @@ ul {
         background-color: rgba(234, 160, 159, 0.81);
     }
 
+    .sectionwrapper p {
+
+
+        font-size: 0.8rem;
+
+    }
+
 
 }
 
 
-@media only screen and (max-width: 920px) {
 
-    nav a {
-        font-size: 1.2rem;
-    }
-
-
-    .title_two {
-
-        margin-top: -40px;
-
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .around {
-
-        padding: 10px 30px 0px 30px;
-
-    }
-}
 
 @media only screen and (max-width: 1300px) {
 

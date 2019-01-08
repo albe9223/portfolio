@@ -31,21 +31,66 @@
 
 <body>
 
+
+    <div class="burgermenu">
+        <h1>ALBERTE EGHOLM</h1>
+
+        <div class="burger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+
+    <header class="mobil">
+        <!--Navigationsbaren på laptop-->
+        <nav class="mobil_nav">
+            <ul>
+
+                <li><a href="index.html">HJEM</a></li>
+
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+
+                <li> <a href="cv.html">CV</a></li>
+
+                <li><a href="contact.html">KONTAKT</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <header class="desktop">
+        <!--Navigationsbaren på laptop-->
+        <nav class="desktop_nav">
+
+            <ul>
+
+
+
+                <li class="links_front"><a href="index.html">HJEM</a></li>
+
+                <li class="links_front"><a href="portfolio.html">PORTFOLIO</a></li>
+
+
+                <li class="links_front"><a href="cv.html">CV</a></li>
+
+                <li class="links_front"><a href="contact.html"> KONTAKT </a></li>
+
+            </ul>
+
+
+
+
+        </nav>
+
+
+    </header>
+
+
+
+
     <main>
-        <header>
-
-
-            <a class="title" href="index.html">
-                <h2> ALBERTE EGHOLM</h2>
-            </a>
-
-            <nav>
-                <a href="index.html">HJEM</a>
-                <a class="active" href="portfolio.html">PORTFOLIO</a>
-                <a href="cv.html">CV</a>
-                <a href="contact.html">KONTAKT</a>
-            </nav>
-        </header>
 
 
         <div class="banner">
@@ -79,11 +124,6 @@
 
         </div>
 
-        <a href="https://www.youtube.com/watch?v=1V0PvQT2cGA">
-            <div class="link">Link til opgave</div>
-        </a>
-
-
         <div class="text">
             <div class="about">
                 <h2>Formål</h2>
@@ -112,17 +152,48 @@
 
                 <div class="column2">
 
-                    <video width="600" controls>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1V0PvQT2cGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></video>
+                    <iframe src="https://www.youtube.com/embed/rfCci8cXOXE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                 </div>
+
+
             </div>
 
         </section>
 
+        <div class="direct_link"> <a href="https://www.youtube.com/watch?v=1V0PvQT2cGA">Link til opgave </a></div>
 
     </main>
 
+    <footer>
+
+        <div class="sectionwrapper">
+
+            <p> alberteegholm@hotmail.com +45 20788456 </p>
+
+
+        </div>
+
+    </footer>
+
+    <script>
+        function onLoad() {
+            function toggleMenu() {
+                document.querySelector(".burger").classList.toggle("change");
+                document.querySelector(".mobil_nav").classList.toggle("show");
+            }
+            document.querySelector(".burger").addEventListener("click", toggleMenu);
+            document.querySelector("ul").addEventListener("click", toggleMenu);
+        }
+        //Vil først starte når DOM-indholdet er loaded
+        document.addEventListener("DOMContentLoaded", function(event) {
+            onLoad();
+        });
+
+    </script>
+
 </body>
+
+
 
 </html>

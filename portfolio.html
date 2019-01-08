@@ -30,22 +30,64 @@
 
 
 <body>
+    <div class="burgermenu">
+        <h1>ALBERTE EGHOLM</h1>
 
+        <div class="burger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
 
-    <header>
+    <header class="mobil">
+        <!--Navigationsbaren på laptop-->
+        <nav class="mobil_nav">
+            <ul>
 
+                <li><a href="index.html">HJEM</a></li>
 
-        <a class="title" href="index.html">
-            <h2> ALBERTE EGHOLM</h2>
-        </a>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
 
-        <nav>
-            <a href="index.html">HJEM</a>
-            <a href="portfolio.html">PORTFOLIO</a>
-            <a href="cv.html">CV</a>
-            <a href="contact.html">KONTAKT</a>
+                <li> <a href="cv.html">CV</a></li>
+
+                <li><a href="contact.html">KONTAKT</a></li>
+
+            </ul>
         </nav>
     </header>
+
+
+    <header class="desktop">
+        <!--Navigationsbaren på laptop-->
+        <nav class="desktop_nav">
+
+            <ul>
+
+
+
+                <li class="links_front"><a href="index.html">HJEM</a></li>
+
+                <li class="links_front"><a href="portfolio.html">PORTFOLIO</a></li>
+
+
+                <li class="links_front"><a href="cv.html">CV</a></li>
+
+                <li class="links_front"><a href="contact.html"> KONTAKT </a></li>
+
+            </ul>
+
+
+
+
+        </nav>
+
+
+    </header>
+
+
+
+
 
     <main>
         <div class="row_port">
@@ -153,19 +195,41 @@
 
         </div>
 
-        <footer>
-
-            <div class="sectionwrapper">
-
-                <p> alberteegholm@hotmail.com - +45 20788456 </p>
-
-
-            </div>
-
-        </footer>
 
     </main>
 
+
+    <script>
+        function onLoad() {
+            function toggleMenu() {
+                document.querySelector(".burger").classList.toggle("change");
+                document.querySelector(".mobil_nav").classList.toggle("show");
+            }
+            document.querySelector(".burger").addEventListener("click", toggleMenu);
+            document.querySelector("ul").addEventListener("click", toggleMenu);
+        }
+        //Vil først starte når DOM-indholdet er loaded
+        document.addEventListener("DOMContentLoaded", function(event) {
+            onLoad();
+        });
+
+    </script>
+
+    <footer>
+
+        <div class="sectionwrapper">
+
+            <p> alberteegholm@hotmail.com +45 20788456 </p>
+
+
+        </div>
+
+    </footer>
+
+
+
 </body>
+
+
 
 </html>

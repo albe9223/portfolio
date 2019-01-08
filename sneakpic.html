@@ -31,21 +31,69 @@
 
 <body>
 
+
+
+    <div class="burgermenu">
+        <h1>ALBERTE EGHOLM</h1>
+
+        <div class="burger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+
+    <header class="mobil">
+        <!--Navigationsbaren på laptop-->
+        <nav class="mobil_nav">
+            <ul>
+
+                <li><a href="index.html">HJEM</a></li>
+
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+
+                <li> <a href="cv.html">CV</a></li>
+
+                <li><a href="contact.html">KONTAKT</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <header class="desktop">
+        <!--Navigationsbaren på laptop-->
+        <nav class="desktop_nav">
+
+            <ul>
+
+
+
+                <li class="links_front"><a href="index.html">HJEM</a></li>
+
+                <li class="links_front"><a href="portfolio.html">PORTFOLIO</a></li>
+
+
+                <li class="links_front"><a href="cv.html">CV</a></li>
+
+                <li class="links_front"><a href="contact.html"> KONTAKT </a></li>
+
+            </ul>
+
+
+
+
+        </nav>
+
+
+    </header>
+
     <main>
-        <header>
 
 
-            <a class="title" href="index.html">
-                <h2> ALBERTE EGHOLM</h2>
-            </a>
 
-            <nav>
-                <a href="index.html">HJEM</a>
-                <a class="active" href="portfolio.html">PORTFOLIO</a>
-                <a href="cv.html">CV</a>
-                <a href="contact.html">KONTAKT</a>
-            </nav>
-        </header>
+
+
         <div class="banner">
             <div class="banner-text">
 
@@ -80,11 +128,6 @@
 
         </div>
 
-
-        <a href="http://alberteegholm.dk/kea/03-animation/privatsnak/">
-            <div class="link">Link til opgave</div>
-        </a>
-
         <div class="text">
             <div class="about">
                 <h2>Formål</h2>
@@ -104,7 +147,38 @@
 
         </div>
 
+        <a href="http://alberteegholm.dk/kea/03-animation/privatsnak/">
+            <div class="direct_link">Link til opgave</div>
+        </a>
+
     </main>
+
+    <script>
+        function onLoad() {
+            function toggleMenu() {
+                document.querySelector(".burger").classList.toggle("change");
+                document.querySelector(".mobil_nav").classList.toggle("show");
+            }
+            document.querySelector(".burger").addEventListener("click", toggleMenu);
+            document.querySelector("ul").addEventListener("click", toggleMenu);
+        }
+        //Vil først starte når DOM-indholdet er loaded
+        document.addEventListener("DOMContentLoaded", function(event) {
+            onLoad();
+        });
+    </script>
+
+
+    <footer>
+
+        <div class="sectionwrapper">
+
+            <p> alberteegholm@hotmail.com +45 20788456 </p>
+
+
+        </div>
+
+    </footer>
 
 </body>
 

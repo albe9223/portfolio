@@ -41,19 +41,61 @@
 <body>
 
 
-    <header>
+    <div class="burgermenu">
+        <h1>ALBERTE EGHOLM</h1>
 
-        <a class="title" href="index.html">
-            <h2> ALBERTE EGHOLM</h2>
-        </a>
+        <div class="burger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
 
-        <nav>
-            <a href="index.html">HJEM</a>
-            <a href="portfolio.html">PORTFOLIO</a>
-            <a href="cv.html">CV</a>
-            <a class="active" href="contact.html">KONTAKT</a>
+    <header class="mobil">
+        <!--Navigationsbaren på laptop-->
+        <nav class="mobil_nav">
+            <ul>
+
+                <li><a href="index.html">HJEM</a></li>
+
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+
+                <li> <a href="cv.html">CV</a></li>
+
+                <li><a href="contact.html">KONTAKT</a></li>
+
+            </ul>
         </nav>
     </header>
+
+
+    <header class="desktop">
+        <!--Navigationsbaren på laptop-->
+        <nav class="desktop_nav">
+
+            <ul>
+
+
+
+                <li class="links_front"><a href="index.html">HJEM</a></li>
+
+                <li class="links_front"><a href="portfolio.html">PORTFOLIO</a></li>
+
+
+                <li class="links_front"><a href="cv.html">CV</a></li>
+
+                <li class="links_front"><a href="contact.html"> KONTAKT </a></li>
+
+            </ul>
+
+
+
+
+        </nav>
+
+
+    </header>
+
 
 
     <main>
@@ -64,15 +106,15 @@
         <div class="box_around">
             <div class="box_inside">
 
-                <h9>Sig hej til mig her!</h9>
+                <h1>Sig hej til mig her!</h1>
 
-                <ul>
+                <ul class="child_text">
                     <h3>Kontakt oplysninger</h3>
 
                     <li>alberteegholm@hotmail.com </li>
                     <li>+45 20788456</li>
                     <li>Guldbergsgade 51B - 2200 Nørrebro</li>
-                    <!--                    <li>LINKEDIN.COM/ALBERTEEGHOLM</li>-->
+
 
 
                 </ul>
@@ -81,16 +123,38 @@
             </div>
             <div class="picture_inside">
 
-                <img src="pictures/29694021_10156356314559374_1401202035_o-1.png" alt="Cinque Terre">
+                <img src="pictures/29694021_10156356314559374_1401202035_o-1.png" alt="profilbillede">
 
             </div>
+        </div>
+
+    </main>
+    <script>
+        function onLoad() {
+            function toggleMenu() {
+                document.querySelector(".burger").classList.toggle("change");
+                document.querySelector(".mobil_nav").classList.toggle("show");
+            }
+            document.querySelector(".burger").addEventListener("click", toggleMenu);
+            document.querySelector("ul").addEventListener("click", toggleMenu);
+        }
+        //Vil først starte når DOM-indholdet er loaded
+        document.addEventListener("DOMContentLoaded", function(event) {
+            onLoad();
+        });
+    </script>
+
+
+    <footer>
+
+        <div class="sectionwrapper">
+
+            <p> alberteegholm@hotmail.com +45 20788456 </p>
 
 
         </div>
 
-
-
-    </main>
+    </footer>
 
 </body>
 
