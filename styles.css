@@ -20,6 +20,7 @@ img {
 
 /*--------------------------------------------------- TITLER PÅ DIVERSE SIDER -----------------------------------------------------------------*/
 
+/*
 .title {
 
     display: block;
@@ -33,6 +34,7 @@ img {
     padding-top: 40px;
 
 }
+*/
 
 
 .title_two {
@@ -51,7 +53,7 @@ img {
 /*--------------------------------------------------- NAVIGATION -----------------------------------------------------------------*/
 
 
-/*-------------- BURGERMENU -------------*/
+/*----- BURGERMENU ----*/
 .mobil {
     display: flex;
     background-color: white;
@@ -235,8 +237,8 @@ nav.show {
 
     ul {
         display: flex;
-        justify-content: center;
-        padding: 14px 16px;
+        justify-content: space-around;
+        /*        padding: 14px 0px;*/
     }
 
 
@@ -250,6 +252,15 @@ nav.show {
         text-decoration: none;
         font-size: 1.5rem;
         color: white;
+        font-weight: 100;
+
+
+    }
+
+
+    .links_front a:hover {
+
+        border-bottom: 2px solid white;
 
 
     }
@@ -263,7 +274,7 @@ nav.show {
 
     display: flex;
     flex-wrap: wrap;
-    background: rgba(234, 160, 159, 0.47);
+    background: rgba(232, 132, 131, 0.47);
     justify-content: center;
     align-content: center;
     height: 100px;
@@ -422,8 +433,8 @@ h6 {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 0px 60px 0px 60px;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 
@@ -431,7 +442,7 @@ h6 {
 
     text-align: center;
     margin: auto;
-    flex-basis: 200px;
+    /*    flex-basis: 200px;*/
     order: 1;
     /*    flex: 1;*/
 }
@@ -452,7 +463,7 @@ h6 {
     font-family: 'Roboto regular', sans-serif;
     line-height: 25px;
     padding: 20px;
-    text-align: left;
+    text-align: justify;
 
 }
 
@@ -460,7 +471,7 @@ h6 {
 .text {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
     font-weight: 1;
     font-size: 1rem;
@@ -482,13 +493,6 @@ h6 {
 .around {
 
     padding: 30px;
-
-    /*
-    align-content: center;
-    justify-content: center;
-*/
-
-
 }
 
 .inside {
@@ -635,12 +639,13 @@ h6 {
 /*--------------------------------------------------- media show -----------------------------------------------------------------*/
 
 
-@media screen and (min-width: 519px) {
-    .item {
+@media screen and (max-width: 930px) {
+    .container {
 
-        flex-basis: 100px;
-
+        flex-direction: column;
+        justify-content: center;
     }
+
 }
 
 @media screen and (max-width: 469px) {
@@ -690,22 +695,18 @@ h6 {
     .sectionwrapper p {
 
 
-        font-size: 0.8rem;
+        font-size: 0.9rem;
 
     }
-
-
 }
 
 
-
-
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1200px) {
 
 
     .about {
 
-        flex-basis: 900px;
+        flex-basis: 700px;
         order: 1;
 
     }
