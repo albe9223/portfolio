@@ -1,0 +1,608 @@
+/*--------------------------------------------------- OVERORDNET INDSTILLINGER -----------------------------------------------------------------*/
+body,
+html {
+    margin: 0;
+    height: 100%;
+}
+
+img {
+    width: 25vw;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------- TITLER PÅ DIVERSE SIDER -----------------------------------------------------------------*/
+
+.title h2 {
+
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    padding-top: 40px;
+
+}
+
+.title_front h2 {
+
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 5.3rem;
+    letter-spacing: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    padding: 400px 0px 0px 0px;
+
+}
+
+
+
+.title_two {
+
+    margin-top: -50px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    font-family: 'Roboto regular', sans-serif;
+}
+
+/*--------------------------------------------------- NAVIGATION -----------------------------------------------------------------*/
+
+/* baggrunds billedet */
+.header_front {
+    background-image: url("front/hero-alberte-1920x850.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 680px;
+
+}
+
+
+
+#nav_front {
+    overflow: hidden;
+    position: sticky;
+    /*    z-index: 2;*/
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 60px;
+    color: white;
+}
+
+nav {
+    /*    position: sticky;*/
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+
+}
+
+/* ændringer inden i navigationsbaren */
+nav a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'Roboto regular', sans-serif;
+    color: black;
+    letter-spacing: 0.3rem;
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+    border-width: 0 0 1.5px;
+    border-style: solid;
+
+
+}
+
+/* farven på det aktuelle link */
+nav a.active {
+    color: black;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------- FOOTER -----------------------------------------------------------------*/
+
+
+.sectionwrapper {
+
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(234, 160, 159, 0.47);
+    justify-content: center;
+    align-content: center;
+    height: 100px;
+
+}
+
+
+.sectionwrapper p {
+
+    flex-basis: 100px;
+    font-family: 'Roboto regular', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    letter-spacing: 0.4rem;
+}
+
+
+
+/*--------------------------------------------------- FORSIDE GALLERI -----------------------------------------------------------------*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* tre kolonner ved siden af hinanden */
+.column {
+    flex-basis: 100px;
+    padding: 10px;
+
+}
+
+.column img {
+    margin-top: 20px;
+
+}
+
+.column img:hover {
+
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 360px) {
+    .column {
+        width: 100%;
+        flex-basis: 30px;
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+
+
+/*--------------------------------------------------- PORTFOLIO GALLERI -----------------------------------------------------------------*/
+.row_port {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 30px 0px 40px;
+    margin-top: 50px;
+}
+
+/* Tre kolonner der flyver ved siden af hinanden */
+.column_port {
+    flex-basis: 50px;
+    flex-grow: 1;
+}
+
+.column_port h3 {
+    font-size: 1.8rem;
+    font-family: 'Roboto Condensed', sans-serif;
+
+
+}
+
+.column_port img:hover {
+
+    opacity: 0.6;
+    cursor: pointer;
+
+
+}
+
+.column_port p:hover {
+
+    font-weight: bold;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    text-align: center;
+
+}
+
+.content p {
+    background-color: white;
+    font-size: 1.5rem;
+    font-family: 'Roboto regular', sans-serif;
+    cursor: pointer;
+}
+
+/* Responsivt layout - der gerne skulle få kolonnerne til hoppe ovenpå hinaden istedet for ved  */
+
+@media screen and (max-width: 1200px) {
+    .column_port {
+        width: 100%;
+        flex-basis: 200px;
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+/*--------------------------------------------------- FÆLLES INDSTILLINGER FOR SIDERNE -----------------------------------------------------------------*/
+
+.banner {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+.banner-text {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+}
+
+
+.link {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-family: 'Roboto Condensed';
+    text-align: center;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.84);
+}
+
+.link:hover {
+    opacity: 0.6;
+}
+
+
+h5 {
+
+    font-size: 2.6rem;
+    margin: 10px 0px 0px 0px;
+
+}
+
+h6 {
+
+    font-size: 1.8rem;
+    color: rgba(62, 58, 58, 0.9);
+    font-weight: 3;
+    margin-top: 8px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -40px;
+    padding: 0px 60px 0px 60px;
+}
+
+
+.item {
+
+    text-align: center;
+    margin: auto;
+    flex-basis: 200px;
+    order: 1;
+    /*    flex: 1;*/
+}
+
+.text h2 {
+
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    /*    text-align: left;*/
+
+}
+
+.about p {
+
+    color: black;
+    font-size: 1rem;
+    font-family: 'Roboto regular', sans-serif;
+    line-height: 25px;
+
+}
+
+
+.text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 0px 30px 0px 30px;
+    font-weight: 1;
+    font-size: 1rem;
+
+}
+
+.about {
+    text-align: center;
+    margin: auto;
+    flex-basis: 400px;
+    order: 1;
+
+}
+
+
+
+/*--------------------------------------------------- CV -----------------------------------------------------------------*/
+
+.around {
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 200px 0px 200px;
+    align-content: center;
+    justify-content: center;
+
+
+}
+
+.inside {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+
+
+}
+
+.child-left h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.child-left p,
+.child-left li {
+
+    font-family: 'Roboto regular', sans-serif;
+    line-height: 1.6;
+    font-size: 0.9rem;
+
+}
+
+.child-left h4 {
+    font-family: 'Roboto regular', sans-serif;
+    font-size: 1.9rem;
+    letter-spacing: 0.1em;
+    font-weight: 1;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*--------------------------------------------------- KONTAKT -----------------------------------------------------------------*/
+
+.box_around {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+.box_inside {
+    text-align: center;
+
+}
+
+.box_inside h9 {
+
+    font-size: 2.0rem;
+    color: black;
+    font-weight: 2;
+    letter-spacing: 0.1em;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.box_inside p,
+.box_inside li,
+.box_inside h3 {
+
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    list-style: none;
+    letter-spacing: 0.1em;
+}
+
+
+.picture_inside {
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+
+.picture_inside img {
+    height: 200px;
+    width: 200px;
+
+}
+
+.picture_inside img:hover {
+    border
+}
+
+.icons_inside {
+
+    text-align: center;
+    padding-top: 20px;
+
+
+}
+
+/*--------------------------------------------------- video i bund -----------------------------------------------------------------*/
+
+#presvideo {}
+
+#presvideo video {
+    width: 40%;
+}
+
+#presvideo h2 {
+    color: rgba(0, 0, 0, 0.83);
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    font-size: 2.0rem;
+}
+
+#presvideo .column1 {
+    flex-basis: 100px;
+    padding-top: 2px;
+}
+
+#presvideo .column2 {
+    text-align: center;
+    flex-basis: 100px;
+    padding: 10px 0px 20px 0px;
+}
+
+#videoer .sectionwrapper2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*--------------------------------------------------- IKONER -----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*--------------------------------------------------- media show -----------------------------------------------------------------*/
+
+
+@media screen and (min-width: 519px) {
+    .item {
+
+        flex-basis: 100px;
+
+    }
+}
+
+@media screen and (max-width: 469px) {
+    h5 {
+
+        font-size: 2rem;
+    }
+
+
+    h6 {
+
+        font-size: 1.3rem;
+    }
+
+
+    .row_port {
+        padding: none;
+        margin-top: 0px;
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+    #videoer .v1 {
+
+        flex-basis: 200px;
+    }
+}
+
+@media screen and (min-width: 660px) {
+    #videoer .v1 {
+
+        flex-basis: 100px;
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+
+    .title_front h2 {
+
+        font-size: 3.3rem;
+
+
+
+    }
+
+    .title h2 {
+
+        font-size: 2.2rem;
+
+
+    }
+
+    .header_front {
+
+        background-image: none;
+        background-color: rgba(234, 160, 159, 0.81);
+    }
+
+
+}
+
+
+@media only screen and (max-width: 920px) {
+
+    nav a {
+        font-size: 1.2rem;
+    }
+
+
+    .title_two {
+
+        margin-top: -40px;
+
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .around {
+
+        padding: 10px 30px 0px 30px;
+
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+
+
+    .about {
+
+        flex-basis: 900px;
+        order: 1;
+
+    }
+
+}
